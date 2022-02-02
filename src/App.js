@@ -5,6 +5,8 @@ import { Button, FormControl, InputLabel, Input } from "@mui/material";
 import db from "./firebase";
 import firebase from "firebase/compat/app";
 import FlipMove from "react-flip-move";
+import SendIcon from "@mui/icons-material/Send";
+import { IconButton } from "@mui/material";
 
 function App() {
   const [messages, setMessages] = useState([]);
@@ -49,24 +51,31 @@ function App() {
       <h1>Facebook Messenger</h1>
       <h2>Welcome {username}</h2>
       <form className="app__form">
-        <FormControl>
-          <InputLabel>Enter message...</InputLabel>
+        <FormControl className="app__formControl">
+          {/* <InputLabel>Enter message...</InputLabel> */}
           <Input
+            placeholder="Enter message..."
             className="app__input"
             value={input}
             onChange={inputHandler}
             type="text"
           />
 
-          <Button
-            className="app__button"
+          <IconButton
+            className="app__iconButton"
             variant="contained"
             color="primary"
             disabled={!input}
             onClick={submitHandler}
           >
+            <SendIcon />
+          </IconButton>
+
+          {/* <Button
+            
+          >
             Send message
-          </Button>
+          </Button> */}
         </FormControl>
       </form>
 

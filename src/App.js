@@ -2,11 +2,12 @@ import { useState, useEffect } from "react";
 import "./App.css";
 import Message from "./Message";
 import { Button, FormControl, InputLabel, Input } from "@mui/material";
+// import db from "./firebase.js";
 
 function App() {
   const [messages, setMessages] = useState([
-    { username: "Johnny", text: "hello" },
-    { username: "Mike", text: "What is uuup?" },
+    { username: "Johnny", message: "hello" },
+    { username: "Mike", message: "What is uuup?" },
   ]);
   const [input, setInput] = useState("");
   const [username, setUsername] = useState("");
@@ -21,7 +22,7 @@ function App() {
 
   const submitHandler = (e) => {
     e.preventDefault();
-    setMessages([...messages, { username: username, text: input }]);
+    setMessages([...messages, { username: username, message: input }]);
     setInput("");
   };
 

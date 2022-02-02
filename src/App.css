@@ -7,6 +7,10 @@
   pointer-events: none;
 }
 
+html {
+  overflow-y: overlay;
+}
+
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
@@ -35,4 +39,28 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.logo {
+  width: 100px;
+  height: 100px;
+}
+
+.app__form {
+  padding: 20px;
+  position: fixed;
+  bottom: 0;
+  background-color: #e9e9eb;
+  z-index: 2;
+  width: 100%;
+  margin: 20px;
+  display: flex;
+  flex-direction: row;
+}
+
+.app__input {
+  flex: 1;
+}
+.app__button {
+  flex: 0;
 }

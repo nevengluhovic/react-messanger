@@ -63,6 +63,7 @@ function App() {
 
           <IconButton
             className="app__iconButton"
+            type="submit"
             variant="contained"
             color="primary"
             disabled={!input}
